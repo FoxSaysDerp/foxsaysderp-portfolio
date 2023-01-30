@@ -5,9 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"pre-commit": "lint-staged"
+		"start": "next start"
 	},
 	"dependencies": {
 		"contentful": "^9.3.0",
@@ -28,8 +26,6 @@
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-next": "13.1.6",
 		"eslint-config-prettier": "^8.6.0",
-		"husky": "^8.0.3",
-		"lint-staged": "^13.1.0",
 		"prettier": "^2.8.3"
 	}
 }
