@@ -17,6 +17,18 @@
 			{
 				"extensions": [".tsx"]
 			}
-		]
+		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"import/prefer-default-export": "off",
+		"react/function-component-definition": "off"
 	}
 }
