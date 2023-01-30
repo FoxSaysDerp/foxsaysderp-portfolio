@@ -21,7 +21,8 @@
 		],
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"@public/*": ["./public/*"]
 		}
 	},
 	"include": [
@@ -30,7 +31,8 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"pages/**/*",
-		"src/**/*"
+		"src/**/*",
+		"i18next.config.js"
 	],
 	"exclude": ["node_modules"]
 }

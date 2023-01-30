@@ -1,0 +1,11 @@
+{
+	"header": {
+		"navbar": {
+			"home": "Strona główna",
+			"about": "O mnie",
+			"projects": "Projekty",
+			"contact": "Kontakt"
+		},
+		"orderService": "Zamów usługę"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"header": {
+		"navbar": {
+			"home": "Home",
+			"about": "About",
+			"projects": "Projects",
+			"contact": "Contact"
+		},
+		"orderService": "Order service"
+	}
+}
