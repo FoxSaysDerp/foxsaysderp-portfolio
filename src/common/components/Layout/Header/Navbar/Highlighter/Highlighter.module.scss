@@ -1,0 +1,8 @@
+.highlighter {
+	position: absolute;
+	height: calc(100% - 8px);
+	background-color: #fff;
+	border-radius: 24px;
+	z-index: 5;
+	transition: all 0.3s ease-in-out 0s;
+}

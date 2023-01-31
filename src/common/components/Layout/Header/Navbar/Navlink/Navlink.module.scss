@@ -1,0 +1,16 @@
+.navlink {
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	padding: 6px 16px;
+	transition: all 0.3s ease-in-out 0s;
+	color: rgb(13, 17, 23);
+	font-size: 14px;
+	text-decoration: none;
+	z-index: 6;
+	&:hover,
+	&:active,
+	&:focus {
+		color: rgb(105, 107, 109);
+	}
+}

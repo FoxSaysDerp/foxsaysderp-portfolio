@@ -2,8 +2,8 @@ import { Layout } from '@/common/components/Layout'
 import { Locale } from '@/types/locale'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-export default function Home() {
-	return <Layout>Hello world</Layout>
+export default function Projects() {
+	return <Layout>Projects</Layout>
 }
 
 export async function getStaticProps({ locale }: { locale: Locale }) {
