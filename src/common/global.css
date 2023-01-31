@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@import url('https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css');
+
+:root {
+	--background-color: #f7f2f2;
+	--text-color: #0d1117;
+	--text-color-bright: #696b6d;
+	--text-color-dark: #0d1117;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+ }
+
+body {
+	font-family: 'Nunito', sans-serif;
+	background-color: var(--background-color);
+}

@@ -1,6 +1,7 @@
 import { appWithTranslation } from 'next-i18next'
 import { FC } from 'react'
 import type { AppProps } from 'next/app'
+import '@/common/global.css'
 
 interface AppPropsE extends AppProps {
 	Component: FC
