@@ -1,25 +1,16 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef, useContext } from 'react'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
-import s from './Navbar.module.scss'
+import { IThemeContext, ThemeContext } from '@/common/context/ThemeContext'
 import { Navlink } from './Navlink'
 import { Highlighter } from './Highlighter'
+import s from './Navbar.module.scss'
 
 export const Navbar = () => {
-	let localHighlighterWidth: string | null = null
-	let localHighlighterLeft: string | null = null
+	const { highlighterState, changeHighlighterState } = useContext(
+		ThemeContext
+	) as IThemeContext
 
-	if (typeof window !== 'undefined') {
-		localHighlighterWidth = localStorage.getItem('highlighterWidth')
-		localHighlighterLeft = localStorage.getItem('highlighterLeft')
-	}
-
-	const [highlightWidth, setHighlightWidth] = useState<number>(
-		localHighlighterWidth ? Number(localHighlighterWidth) : 0
-	)
-	const [highlighLeft, setHighlightLeft] = useState<number>(
-		localHighlighterLeft ? Number(localHighlighterLeft) : 0
-	)
 	const { t } = useTranslation('common')
 
 	const { asPath } = useRouter()
@@ -35,23 +26,18 @@ export const Navbar = () => {
 
 	useEffect(() => {
 		if (linkRef.current) {
-			setHighlightWidth(linkRef.current.offsetWidth)
-			localStorage.setItem(
-				'highlighterWidth',
-				linkRef.current.offsetWidth.toString()
-			)
-
-			setHighlightLeft(linkRef.current.offsetLeft)
-			localStorage.setItem(
-				'highlighterLeft',
-				linkRef.current.offsetLeft.toString()
-			)
+			const { offsetWidth, offsetLeft } = linkRef.current
+			changeHighlighterState({ width: offsetWidth, left: offsetLeft })
 		}
-	}, [localHighlighterLeft, localHighlighterWidth])
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	return (
 		<nav className={s.navbar}>
-			<Highlighter width={highlightWidth} left={highlighLeft} />
+			<Highlighter
+				width={highlighterState.width}
+				left={highlighterState.left}
+			/>
 			{NAV_LINKS.map((navLink) => (
 				<Navlink
 					href={navLink.href}

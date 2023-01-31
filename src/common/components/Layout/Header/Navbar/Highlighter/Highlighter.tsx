@@ -1,11 +1,7 @@
+import { IHighlighter } from '@/common/context/ThemeContext'
 import s from './Highlighter.module.scss'
 
-interface Props {
-	width: number
-	left: number
-}
-
-export const Highlighter = (props: Props) => {
+export const Highlighter = (props: IHighlighter) => {
 	const { width, left } = props
 	return <span className={s.highlighter} style={{ width, left }} />
 }
