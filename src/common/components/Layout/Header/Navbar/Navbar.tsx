@@ -1,7 +1,7 @@
 import { useEffect, useRef, useContext } from 'react'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
-import { IThemeContext, ThemeContext } from '@/common/context/ThemeContext'
+import { IThemeContext, ThemeContext } from '@/common/context/themeContext'
 import { Navlink } from './Navlink'
 import { Highlighter } from './Highlighter'
 import s from './Navbar.module.scss'
