@@ -5,7 +5,9 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"prepare": "npm i next@13.1.6",
+		"vercel-build": "npm run prepare && next build"
 	},
 	"dependencies": {
 		"contentful": "^9.3.0",
