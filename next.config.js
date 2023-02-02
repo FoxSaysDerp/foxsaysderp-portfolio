@@ -7,13 +7,6 @@ const nextConfig = {
 		appDir: false,
 	},
 	i18n,
-	webpack: (config) => {
-		// eslint-disable-next-line no-param-reassign
-		config.resolve.alias = {
-			...config.resolve.alias,
-			'~': __dirname,
-		}
-	},
 }
 
 module.exports = nextConfig
