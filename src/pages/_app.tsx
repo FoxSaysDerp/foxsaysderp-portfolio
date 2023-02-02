@@ -1,7 +1,7 @@
 import { appWithTranslation } from 'next-i18next'
 import { FC } from 'react'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from '@/common/context/themeContext'
+import { ThemeProvider } from '@/common/context/ThemeContext'
 import '@/common/global.css'
 
 interface AppPropsE extends AppProps {

@@ -1,5 +1,5 @@
 import { createContext, FC, ReactNode, useMemo, useState } from 'react'
-import { IThemeContext, IHighlighter, ThemeType } from './types.theme'
+import { IThemeContext, IHighlighter, ThemeType } from './ThemeContext.types'
 
 export const ThemeContext = createContext<IThemeContext | null>(null)
 

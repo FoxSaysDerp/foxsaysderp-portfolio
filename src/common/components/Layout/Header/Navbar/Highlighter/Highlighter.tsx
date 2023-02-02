@@ -1,4 +1,4 @@
-import { IHighlighter } from '@/common/context/themeContext'
+import { IHighlighter } from '@/common/context/ThemeContext'
 import s from './Highlighter.module.scss'
 
 export const Highlighter = (props: IHighlighter) => {
