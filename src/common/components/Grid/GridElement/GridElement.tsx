@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef, PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import { useUI } from '@/common/hooks/useUI/useUI'
+import { useUI } from '@/common/hooks/useUI'
 import { GridItem } from './GridElement.types'
 import s from './GridElement.module.scss'
 
