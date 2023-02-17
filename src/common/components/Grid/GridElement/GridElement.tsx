@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef, PropsWithChildren } from 'react'
 import classNames from 'classnames'
-// import { useUI } from '@/common/hooks/useUI'
+import { useUI } from '@/common/hooks/useUI'
 import { GridItem } from './GridElement.types'
 import s from './GridElement.module.scss'
 
@@ -21,12 +21,12 @@ export const GridElement = forwardRef<HTMLDivElement, PropsWithChildren<Props>>(
 			fullWidth = false,
 		} = props
 
-		// const { currentPage } = useUI()
+		const { currentPage } = useUI()
 		return (
 			<div
 				className={classNames(className, s.gridElement, {
 					[s.padding]: !fullWidth,
-					// [s.shadowed]: currentPage !== page,
+					[s.shadowed]: currentPage !== page,
 				})}
 				style={{ ...style }}
 				key={key}
